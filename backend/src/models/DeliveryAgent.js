@@ -1,4 +1,4 @@
-delivery_model = '''const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const deliveryAgentSchema = new mongoose.Schema({
 user: {
@@ -72,7 +72,3 @@ timestamps: true
 deliveryAgentSchema.index({ 'availability.lastLocation': '2dsphere' });
 
 module.exports = mongoose.model('DeliveryAgent', deliveryAgentSchema);
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/models/DeliveryAgent.js", "w") as f:
-f.write(delivery_model)
