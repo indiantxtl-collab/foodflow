@@ -1,4 +1,4 @@
-payment_controller = '''const Razorpay = require('razorpay');
+const Razorpay = require('razorpay');
 const crypto = require('crypto');
 const { Order } = require('../models');
 
@@ -145,7 +145,3 @@ error: error.message
 });
 }
 };
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/controllers/payment.controller.js", "w") as f:
-f.write(payment_controller)
