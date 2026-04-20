@@ -1,4 +1,4 @@
-review_model = '''const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const reviewSchema = new mongoose.Schema({
 user: {
@@ -44,7 +44,3 @@ reviewSchema.index({ restaurant: 1, createdAt: -1 });
 reviewSchema.index({ user: 1 });
 
 module.exports = mongoose.model('Review', reviewSchema);
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/models/Review.js", "w") as f:
-f.write(review_model)
