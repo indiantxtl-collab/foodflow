@@ -1,4 +1,4 @@
-order_controller = '''const { Order, Restaurant, User, Coupon, DeliveryAgent } = require('../models');
+const { Order, Restaurant, User, Coupon, DeliveryAgent } = require('../models');
 const { v4: uuidv4 } = require('uuid');
 
 // Generate unique order ID
@@ -531,7 +531,3 @@ error: error.message
 });
 }
 };
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/controllers/order.controller.js", "w") as f:
-f.write(order_controller)
