@@ -1,7 +1,4 @@
-
-# Create Backend package.json
-backend_package = """{
-  "name": "foodflow-backend",
+ "name": "foodflow-backend",
   "version": "1.0.0",
   "description": "FoodFlow - Complete Food Delivery Ecosystem Backend",
   "main": "server.js",
@@ -38,8 +35,3 @@ backend_package = """{
     "node": ">=18.0.0"
   }
 }"""
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/package.json", "w") as f:
-    f.write(backend_package)
-
-print("✅ Backend package.json created")
