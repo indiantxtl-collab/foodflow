@@ -1,4 +1,4 @@
-order_model = '''const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const orderItemSchema = new mongoose.Schema({
 menuItem: {
@@ -131,7 +131,3 @@ orderSchema.index({ orderId: 1 });
 orderSchema.index({ status: 1, createdAt: -1 });
 
 module.exports = mongoose.model('Order', orderSchema);
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/models/Order.js", "w") as f:
-f.write(order_model)
