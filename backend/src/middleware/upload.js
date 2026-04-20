@@ -1,4 +1,4 @@
-upload_middleware = '''const multer = require('multer');
+const multer = require('multer');
 const path = require('path');
 
 // Configure storage
@@ -31,7 +31,3 @@ fileFilter: fileFilter
 });
 
 module.exports = upload;
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/middleware/upload.js", "w") as f:
-f.write(upload_middleware)
