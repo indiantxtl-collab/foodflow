@@ -1,4 +1,4 @@
-user_controller = '''const { User } = require('../models');
+const { User } = require('../models');
 
 // @desc    Update profile
 // @route   PUT /api/users/profile
@@ -174,7 +174,3 @@ error: error.message
 });
 }
 };
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/controllers/user.controller.js", "w") as f:
-f.write(user_controller)
