@@ -1,4 +1,4 @@
-coupon_model = '''const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const couponSchema = new mongoose.Schema({
 code: {
@@ -60,7 +60,3 @@ timestamps: true
 });
 
 module.exports = mongoose.model('Coupon', couponSchema);
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/models/Coupon.js", "w") as f:
-f.write(coupon_model)
