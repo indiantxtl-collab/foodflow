@@ -1,4 +1,4 @@
-user_model = '''const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
 const userSchema = new mongoose.Schema({
@@ -88,7 +88,3 @@ return await bcrypt.compare(candidatePassword, this.password);
 };
 
 module.exports = mongoose.model('User', userSchema);
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/models/User.js", "w") as f:
-f.write(user_model)
