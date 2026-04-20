@@ -1,4 +1,4 @@
-db_config = '''const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const connectDB = async () => {
 try {
@@ -31,7 +31,3 @@ process.exit(1);
 };
 
 module.exports = connectDB;
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/config/database.js", "w") as f:
-f.write(db_config)
