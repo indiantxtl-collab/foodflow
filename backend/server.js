@@ -1,5 +1,3 @@
-
-# Create main server.js with all configurations
 server_js = '''require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
