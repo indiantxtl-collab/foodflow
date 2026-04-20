@@ -1,4 +1,4 @@
-restaurant_model = '''const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 const menuItemSchema = new mongoose.Schema({
 name: { type: String, required: true },
@@ -128,7 +128,3 @@ restaurantSchema.index({ status: 1 });
 restaurantSchema.index({ 'menu.category': 1 });
 
 module.exports = mongoose.model('Restaurant', restaurantSchema);
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/models/Restaurant.js", "w") as f:
-f.write(restaurant_model)
