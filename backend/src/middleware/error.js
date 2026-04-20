@@ -1,4 +1,4 @@
-error_middleware = '''exports.errorHandler = (err, req, res, next) => {
+exports.errorHandler = (err, req, res, next) => {
 let error = { ...err };
 error.message = err.message;
 
@@ -27,7 +27,3 @@ success: false,
 message: error.message || 'Server Error'
 });
 };
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/middleware/error.js", "w") as f:
-f.write(error_middleware)
