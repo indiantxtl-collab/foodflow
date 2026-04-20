@@ -1,4 +1,4 @@
-socket_handler = '''const { User, DeliveryAgent, Order } = require('../models');
+const { User, DeliveryAgent, Order } = require('../models');
 
 module.exports = (io) => {
 io.on('connection', (socket) => {
@@ -126,7 +126,3 @@ socket.on('disconnect', () => {
 
 });
 };
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/socket/socket.handler.js", "w") as f:
-f.write(socket_handler)
