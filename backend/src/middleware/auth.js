@@ -1,4 +1,4 @@
-auth_middleware = '''const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 const { User } = require('../models');
 
 exports.authenticate = async (req, res, next) => {
@@ -68,7 +68,3 @@ if (!user) {
 
 };
 };
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/middleware/auth.js", "w") as f:
-f.write(auth_middleware)
