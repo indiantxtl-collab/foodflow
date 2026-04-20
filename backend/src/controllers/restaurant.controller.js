@@ -1,4 +1,4 @@
-restaurant_controller = '''const { Restaurant, User } = require('../models');
+const { Restaurant, User } = require('../models');
 const geolib = require('geolib');
 
 // @desc    Get all restaurants with location-based filtering
@@ -425,7 +425,3 @@ error: error.message
 });
 }
 };
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/controllers/restaurant.controller.js", "w") as f:
-f.write(restaurant_controller)
