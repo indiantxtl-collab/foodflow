@@ -1,4 +1,4 @@
-utils_index = '''const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 
 exports.generateToken = (userId) => {
 return jwt.sign({ userId }, process.env.JWT_SECRET, {
@@ -30,7 +30,3 @@ currency: 'INR',
 minimumFractionDigits: 0
 }).format(price);
 };
-'''
-
-with open("/mnt/kimi/output/foodflow-ecosystem/backend/src/utils/index.js", "w") as f:
-f.write(utils_index)
